@@ -15,7 +15,7 @@ const Heroimage = () => {
                             </div>
                         </div>
                         <div className="hero-image__search">
-                            <Inputsearch />
+                            <Inputsearch inputClass="search" />
                         </div>
                     </div>
                 </div>

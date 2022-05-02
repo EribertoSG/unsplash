@@ -2,15 +2,22 @@
     display: flex;
     align-items: center;
     width: 100%;
-    border-radius: .5rem;
+    border-radius: .25rem;
     background-color: #fff;
     overflow: hidden;
+    border: 1px solid var(--border-color);
 }
+
+.input-search__style-two {
+    border-radius: 2rem;
+    background-color: #fff;
+}
+
 
 .input-search button {
     display: flex;
     align-items: center;
-    padding: .8rem;
+    padding: .5rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -22,4 +29,16 @@
     border: none;
     outline: none;
     color: rgb(59, 59, 59);
+    background-color: transparent;
+    -webkit-appearance: none
+}
+
+@include mq(large) {
+    .input-search button {
+        padding: .8rem 1.5rem;
+    }
+
+    .input-search__style-two button {
+        padding: .6rem 1.5rem;
+    }
 }

@@ -13,6 +13,8 @@
     --white-color: #ffffff;
     --color: var(--primary-color);
     --color-alt: var(--primary-color-alt);
+    --color-icon: #767676;
+    --border-color: #eee;
 
     /*  Fuentes  */
     --body-font: 'Lato', sans-serif;
@@ -51,6 +53,7 @@
 }
 
 @include mq(large) {
+
     /*  Variables de tamaño en desktop  */
     :root {
         --header-height: 4rem;
