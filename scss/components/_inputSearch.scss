@@ -1,0 +1,25 @@
+.input-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: .5rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.input-search button {
+    display: flex;
+    align-items: center;
+    padding: .8rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: rgb(59, 59, 59);
+}
