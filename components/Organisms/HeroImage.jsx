@@ -8,7 +8,7 @@ const Heroimage = () => {
                 <div className="hero-image__content">
                     <div className="hero-image__main-content">
                         <div className="hero-image__title-text">
-                            <h1 className="hero-image__title">Unsplash</h1>
+                            <h1 className="hero-image__title animate__animated animate__bounceIn">Unsplash</h1>
                             <div className="hero-image__text">
                                 <p>The internet’s source of freely-usable images.</p>
                                 <p>Powered by creators everywhere.</p>
