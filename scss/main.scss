@@ -5,10 +5,12 @@
 
 //base
 @import "./base/base";
+@import "./base/masonry";
 
 //layout
 @import "./layout/heroImage";
 @import "./layout/Navigation";
+@import "./layout/allPhotos";
 
 //components
 @import "./components/inputSearch";

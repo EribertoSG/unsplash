@@ -1,0 +1,17 @@
+.masonry {
+    margin: 2rem 2rem;
+}
+
+.masonry .item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &>img {
+        width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+}
