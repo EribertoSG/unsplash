@@ -1,6 +1,10 @@
+import { useMediaQuery } from 'react-responsive'
+
 import Inputsearch from "../molecules/InputSearch"
 
 const Heroimage = () => {
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width:640px)' })
+
     return (
         <div className="hero-image">
             <img src="/assets/img/agnieszka-kowalczyk.jpg" alt="agnieszka-kowalczyk" className="background-image" />
@@ -14,13 +18,15 @@ const Heroimage = () => {
                                 <p>Powered by creators everywhere.</p>
                             </div>
                         </div>
-                        <div className="hero-image__search">
-                            <Inputsearch inputClass="search" />
-                        </div>
+                        {isDesktopOrLaptop && (
+                            <div className="hero-image__search">
+                                <Inputsearch inputClass="search" />
+                            </div>
+                        )}
                     </div>
                 </div>
                 <div className="hero-image__footer">
-                    <p>Photo of the Day byAgnieszka Kowalczyk</p>
+                    <p>Photo of the Day by Eriberto Santos</p>
                     <p>Read more about the Unsplash License</p>
                 </div>
             </div>
