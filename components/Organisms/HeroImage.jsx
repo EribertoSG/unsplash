@@ -7,7 +7,7 @@ const Heroimage = () => {
 
     return (
         <div className="hero-image">
-            <img src="/assets/img/agnieszka-kowalczyk.jpg" alt="agnieszka-kowalczyk" className="background-image" />
+            <img src="https://images.unsplash.com/photo-1650012008053-b96b760d8984?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="agnieszka-kowalczyk" className="background-image" />
             <div className="hero-image__container">
                 <div className="hero-image__content">
                     <div className="hero-image__main-content">

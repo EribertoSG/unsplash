@@ -2,6 +2,12 @@
     min-height: 20vh;
     height: 350px;
     position: relative;
+
+}
+
+.hero-image>img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .background-image {
@@ -52,6 +58,7 @@
 
 .hero-image__footer {
     display: none;
+
     & p {
         color: #fff;
         font-size: var(--small-font-size);
@@ -62,7 +69,8 @@
     .hero-image {
         height: 500px;
     }
-    .hero-image__footer{
+
+    .hero-image__footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: start;
