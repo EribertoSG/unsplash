@@ -1,0 +1,8 @@
+.main-layout {
+    margin: 1rem 2rem 1rem 2rem;
+    min-height: calc(100vh - var(--header-height));
+}
+.other-layout{
+    margin: calc(var(--header-height) + 1rem) 2rem 1rem 2rem;
+    min-height: calc(100vh - var(--header-height));
+}

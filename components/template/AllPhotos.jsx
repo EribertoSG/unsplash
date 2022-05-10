@@ -31,7 +31,6 @@ const AllPhotos = () => {
 
     return (
         <div className='masonry'>
-
             <ResponsiveMasonry columnsCountBreakPoints={breakPoints}>
                 <Masonry>
                     {
@@ -43,7 +42,6 @@ const AllPhotos = () => {
                     }
                 </Masonry>
             </ResponsiveMasonry>
-
         </div>
     )
 }
