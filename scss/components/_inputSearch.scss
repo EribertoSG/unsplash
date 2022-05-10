@@ -30,15 +30,16 @@
     outline: none;
     color: rgb(59, 59, 59);
     background-color: transparent;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    margin-right: .5rem;
 }
 
 @include mq(large) {
     .input-search button {
-        padding: .8rem 1.5rem;
+        padding: .8rem 1.2rem;
     }
 
     .input-search__style-two button {
-        padding: .6rem 1.5rem;
+        padding: .6rem 1.2rem;
     }
 }
