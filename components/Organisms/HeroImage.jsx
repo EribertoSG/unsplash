@@ -1,13 +1,15 @@
 import { useMediaQuery } from 'react-responsive'
+import useSearch from '../hooks/useSearch'
 
 import Inputsearch from "../molecules/InputSearch"
 
-const Heroimage = () => {
+const Heroimage = ({ src }) => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width:640px)' })
-
+    const hola = useSearch()
+    console.log(hola)
     return (
         <div className="hero-image">
-            <img src="https://images.unsplash.com/photo-1650012008053-b96b760d8984?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="agnieszka-kowalczyk" className="background-image" />
+            <img src={src.urls.full} alt="agnieszka-kowalczyk" className="background-image" />
             <div className="hero-image__container">
                 <div className="hero-image__content">
                     <div className="hero-image__main-content">
@@ -26,7 +28,7 @@ const Heroimage = () => {
                     </div>
                 </div>
                 <div className="hero-image__footer">
-                    <p>Photo of the Day by Eriberto Santos</p>
+                    <p>Photo of the Day by {`${src.user.name} ${src.user.last_name}`}</p>
                     <p>Read more about the Unsplash License</p>
                 </div>
             </div>
