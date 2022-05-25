@@ -11,7 +11,7 @@ const Inputsearch = ({ className, inputClass }) => {
             <input
                 className={inputClass}
                 type="search"
-                name="search"
+                name="inputSearch"
                 id="search"
                 placeholder="Search photos"
                 onChange={handleOnChange}

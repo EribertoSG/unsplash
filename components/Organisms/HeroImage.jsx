@@ -1,12 +1,8 @@
 import { useMediaQuery } from 'react-responsive'
-import useSearch from '../hooks/useSearch'
-
 import Inputsearch from "../molecules/InputSearch"
 
 const Heroimage = ({ src }) => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width:640px)' })
-    const hola = useSearch()
-    console.log(hola)
     return (
         <div className="hero-image">
             <img src={src.urls.full} alt="agnieszka-kowalczyk" className="background-image" />
