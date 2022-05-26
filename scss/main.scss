@@ -1,11 +1,13 @@
 @import "./base/breakPoints";
 
-//varibles
+//utils
 @import "./utils/variables/variables";
+@import "./utils/function/font";
 
 //base
 @import "./base/base";
 @import "./base/masonry";
+@import "./base/fonts";
 
 //layout
 @import "./layout/layout";

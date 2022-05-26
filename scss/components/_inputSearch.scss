@@ -32,6 +32,7 @@
     background-color: transparent;
     -webkit-appearance: none;
     margin-right: .5rem;
+    font-size: var(--normal-font-size);
 }
 
 @include mq(large) {

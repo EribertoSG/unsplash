@@ -1,0 +1,4 @@
+@function font($font) {
+    $path: '/assets/fonts/'+ $font;
+    @return url($path);
+}
