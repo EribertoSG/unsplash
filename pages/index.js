@@ -7,12 +7,8 @@ import AllPhotos from "../components/template/AllPhotos"
 
 export default function Home({ listPhotos, getARandomPhoto }) {
   const { inputSearch, photos } = useSearch()
-  console.log('desde index: ', photos)
   return (
     <>
-      <Head>
-        <title>{process.env.TITLE}</title>
-      </Head>
       <Heroimage src={getARandomPhoto} />
       <Layout>
         {photos && photos.length === 0 ? <AllPhotos photos={listPhotos} /> : (
