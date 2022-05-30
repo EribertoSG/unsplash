@@ -1,25 +1,25 @@
-import { useState, useEffect, createContext } from 'react'
-import axios from 'axios'
+import { useState, createContext } from 'react'
+import { useRouter } from 'next/router'
 
 const SearchContext = createContext()
+
 const SearchProvider = ({ children }) => {
     const initialState = { inputSearch: '' }
     const [search, setSearch] = useState(initialState)
     const { inputSearch } = search
-    const [photos, setPhotos] = useState()
+    const { push } = useRouter()
+
     const handleOnChange = ({ target: { name, value } }) => {
         setSearch({ ...search, [name]: value })
     }
 
-    useEffect(async () => {
-        const response = await axios.get(`https://api.unsplash.com/search/photos/?client_id=I22cKyDJTTGNBp_cNmTJ-syXQtbP5OVIwLtVY2eg2to&query=${search.inputSearch}`)
-        setPhotos(response.data.results)
-        if (search.inputSearch === '') {
-            setPhotos([])
-        }
-    }, [search.inputSearch])
+    const handleOnClick = () => {
+        if (inputSearch == '') return
+        inputSearch.replace(' ', '-')
+        push(`/search/${inputSearch}`)
+    }
 
-    const data = { inputSearch, photos, handleOnChange }
+    const data = { inputSearch, handleOnChange, handleOnClick }
     return (
         <SearchContext.Provider value={data}>
             {children}

@@ -1,22 +1,14 @@
 import axios from "axios"
-import Head from "next/head"
-import useSearch from "../components/hooks/useSearch"
 import Heroimage from "../components/organisms/HeroImage"
 import Layout from "../components/pages/Layout"
 import AllPhotos from "../components/template/AllPhotos"
 
 export default function Home({ listPhotos, getARandomPhoto }) {
-  const { inputSearch, photos } = useSearch()
   return (
     <>
       <Heroimage src={getARandomPhoto} />
       <Layout>
-        {photos && photos.length === 0 ? <AllPhotos photos={listPhotos} /> : (
-          <>
-            <h2>{`Results for ${inputSearch} on Unsplash API`}</h2>
-            <AllPhotos photos={photos} />
-          </>
-        )}
+        <AllPhotos photos={listPhotos} />
       </Layout>
     </>
   )
