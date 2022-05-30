@@ -24,7 +24,7 @@ const Heroimage = ({ src }) => {
                     </div>
                 </div>
                 <div className="hero-image__footer">
-                    <p>Photo of the Day by {`${src.user.name} ${src.user.last_name}`}</p>
+                    <p>Photo of the Day by {`${src.user.name} ${src.user.last_name && src.user.last_name}`}</p>
                     <p>Read more about the Unsplash License</p>
                 </div>
             </div>

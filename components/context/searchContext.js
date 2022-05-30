@@ -15,8 +15,8 @@ const SearchProvider = ({ children }) => {
 
     const handleOnClick = () => {
         if (inputSearch == '') return
-        inputSearch.replace(' ', '-')
-        push(`/search/${inputSearch}`)
+        const newText = inputSearch.replace(' ', '-')
+        push(`/search/${newText}`)
     }
 
     const data = { inputSearch, handleOnChange, handleOnClick }

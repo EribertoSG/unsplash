@@ -4,13 +4,14 @@ import Layout from '../../components/pages/Layout'
 import AllPhotos from '../../components/template/AllPhotos'
 
 const Search = ({ data, search }) => {
+    const remove = search.replace('-', ' ')
     return (
         <>
             <Head>
-                <title>{`${search} Pictures | Download Free ${search} Photos on Unsplash`}</title>
+                <title>{`${remove} Pictures | Download Free ${remove} Photos on Unsplash`}</title>
             </Head>
             <Layout>
-                <h2>{`Results for ${search} on Unsplash`}</h2>
+                <h2>{`Results for ${remove} on Unsplash`}</h2>
                 <AllPhotos photos={data} />
             </Layout>
         </>
