@@ -1,0 +1,19 @@
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .3);
+    backdrop-filter: blur(4px);
+    z-index: var(--z-other);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.popup {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+}
