@@ -8,12 +8,27 @@
     backdrop-filter: blur(4px);
     z-index: var(--z-other);
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
-.popup {
-    width: 200px;
-    height: 200px;
+.window {
+    position: relative;
+    min-width: 90vw;
+    min-height: 90vh;
+    padding: 1.5rem;
     background-color: #fff;
+    border-radius: .5rem;
+    border: 1px solid #eee;
+}
+
+.window-header {
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-body {
+    height: 100%;
 }

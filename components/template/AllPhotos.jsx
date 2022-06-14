@@ -1,4 +1,5 @@
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import { DowloadLink } from '../atoms/Link'
 import Text from '../atoms/Text'
 import UserProfile from '../atoms/UserProfile'
 
@@ -32,15 +33,15 @@ const AllPhotos = () => {
 
                     {
                         photos.map(img => (
-                            <div key={img.id} className='masonry-item'>
+                            <div key={img.id} className='masonry-item' onClick={() => console.log(img.id)}>
                                 <img src={img.url} alt="masonry" />
                                 <div className='overlay'>
                                     <div className="overlay__actions">
-                                        <button className="button">Dowload</button>
+                                        <DowloadLink />
                                     </div>
-                                    <div className='overlay__user'>
+                                    <div className='user'>
                                         <UserProfile />
-                                        <Text text="Eriberto Santos" className="user-text"/>
+                                        <Text text="Eriberto Santos" className="user-text" />
                                     </div>
                                 </div>
                             </div>
