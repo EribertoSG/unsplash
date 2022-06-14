@@ -8,3 +8,70 @@
     cursor: pointer;
     color: rgb(59, 59, 59);
 }
+
+.button-circle {
+    --wh: 35px;
+    --position: -15px;
+    border: 1px solid #eee;
+    width: var(--wh);
+    height: var(--wh);
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: var(--position);
+    right: var(--position);
+    font-family: 'Lato', sans-serif;
+}
+
+.button-icon {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.button-dowload {
+    color: #676F73;
+    font-size: var(--normal-font-size);
+    height: 32px;
+    line-height: 30px;
+    padding: 0 1.5rem;
+    border-radius: .25rem 0 0 .25rem;
+    border: .5px solid #d1d1d1;
+    background-color: inherit;
+    &:hover {
+        border: .5px solid #000;
+        z-index: 1;
+    }
+}
+
+.button-dowload, .button-options-container button {
+    transition: border-color .1s ease-in-out;
+}
+
+
+.button-options-container button {
+    display: flex;
+    border: .5px solid #d1d1d1;
+    line-height: 30px;
+    height: 32px;
+    padding: 0;
+    align-items: center;
+    border-radius: 0 .25rem .25rem 0;
+    background-color: initial;
+    transform: translateX(-1px);
+    cursor: pointer;
+
+    &:hover {
+        border: .5px solid #000;
+    }
+}
+
+.arrow-down-icon {
+    width: 32px;
+    height: 24px;
+    fill: #676F73;
+}

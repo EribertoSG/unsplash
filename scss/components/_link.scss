@@ -1,0 +1,19 @@
+.dowload-link {
+    padding: .4rem .8rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: .25rem;
+
+    & .dowload-icon {
+        width: 18px;
+        height: 18px;
+        fill: var(--text-color);
+        transition: fill .3s ease;
+    }
+
+    &:hover .dowload-icon {
+        fill: #454647;
+    }
+}
