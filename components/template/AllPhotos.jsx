@@ -1,16 +1,19 @@
+import { useRouter } from 'next/router'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { DowloadLink } from '../atoms/Link'
 import Text from '../atoms/Text'
 import UserProfile from '../atoms/UserProfile'
 
 const AllPhotos = () => {
+    const { push } = useRouter()
+
     const photos = [
-        { id: 1, url: '/assets/img/agnieszka-kowalczyk.jpg' },
-        { id: 2, url: '/assets/img/ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg' },
-        { id: 3, url: '/assets/img/elijah-m-henderson.jpg' },
-        { id: 4, url: '/assets/img/fabrizio-lunardi.jpg' },
-        { id: 5, url: '/assets/img/hamid-tajik.jpg' },
-        { id: 6, url: '/assets/img/marc-kleen.jpg' }
+        { id: 1, url: '/assets/img/agnieszka-kowalczyk.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
+        { id: 2, url: '/assets/img/ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
+        { id: 3, url: '/assets/img/elijah-m-henderson.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
+        { id: 4, url: '/assets/img/fabrizio-lunardi.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
+        { id: 5, url: '/assets/img/hamid-tajik.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
+        { id: 6, url: '/assets/img/marc-kleen.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' }
     ]
 
     const breakPoints = {
@@ -33,15 +36,15 @@ const AllPhotos = () => {
 
                     {
                         photos.map(img => (
-                            <div key={img.id} className='masonry-item' onClick={() => console.log(img.id)}>
+                            <div key={img.id} className='masonry-item' onClick={() => push(`/photo/${img.id}`)}>
                                 <img src={img.url} alt="masonry" />
                                 <div className='overlay'>
                                     <div className="overlay__actions">
                                         <DowloadLink />
                                     </div>
                                     <div className='user'>
-                                        <UserProfile />
-                                        <Text text="Eriberto Santos" className="user-text" />
+                                        <UserProfile userPhoto={img.userPhoto} />
+                                        <Text text={img.userName} className="user-text" />
                                     </div>
                                 </div>
                             </div>

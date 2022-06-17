@@ -1,13 +1,16 @@
 .card-img {
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
-    background-color: rgba($color: #fff, $alpha: .5);
+    background-color: #d1d1d1;
     margin: .5rem auto;
-    backdrop-filter: blur(4px);
+    @include mq(large) {
+        width: 400px;
+    }
 
     &>img {
         width: 100%;
         object-fit: cover;
+        display: block;
     }
 }

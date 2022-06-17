@@ -3,6 +3,9 @@
     min-height: calc(100vh - var(--header-height));
 }
 .other-layout{
-    margin: calc(var(--header-height) + 1rem) 2rem 1rem 2rem;
+    margin: calc(var(--header-height) + 1rem) 1rem 1rem 1rem;
     min-height: calc(100vh - var(--header-height));
+    @include mq(large){
+        margin: calc(var(--header-height) + 1rem) 2rem 1rem 2rem;
+    }
 }

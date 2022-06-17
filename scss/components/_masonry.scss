@@ -37,11 +37,11 @@
 
 .overlay__actions {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .user {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
