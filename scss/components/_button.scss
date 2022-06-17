@@ -31,27 +31,33 @@
     display: flex;
     align-items: center;
     background-color: #fff;
+    border-radius: .25rem;
 }
 
 .button-dowload {
+    border-radius: .25rem 0 0 .25rem;
     color: #676F73;
     font-size: var(--normal-font-size);
     height: 32px;
     line-height: 30px;
     padding: 0 1.5rem;
-    border-radius: .25rem 0 0 .25rem;
     border: .5px solid #d1d1d1;
     background-color: inherit;
+
     &:hover {
         border: .5px solid #000;
         z-index: 1;
     }
 }
 
-.button-dowload, .button-options-container button {
+.button-dowload,
+.button-options-container button {
     transition: border-color .1s ease-in-out;
 }
 
+.button-options-container {
+    position: relative;
+}
 
 .button-options-container button {
     display: flex;

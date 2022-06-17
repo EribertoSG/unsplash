@@ -3,7 +3,7 @@
     top: 0;
     right: 0;
     margin-top: 40px;
-    width: 180px;
+    width: 250px;
     background-color: #fff;
     border: 1px solid #d1d1d1;
     border-radius: 4px;
@@ -14,23 +14,27 @@
     min-width: 135px;
     z-index: var(--z-overlay);
     transform: scale(0);
-    transition: transform .20ms ease;
+    transform-origin: right top;
+    transition: transform .1s ease;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
 }
 
 .open-menu {
-    transition: transform .3s cubic-bezier(.17,.67,.46,1.35);
+    transition: transform .3s cubic-bezier(.17, .67, .46, 1.35);
     transform: scale(1);
 }
 
 .menu__container {
     padding: .5rem 0;
     z-index: 20;
+    overflow: hidden;
 
     & hr {
         display: block;
-        height: 1px;
+        height: .5px;
         border: 0;
-        border-top: 1px solid #d1d1d1;
+        border-top: .5px solid #d1d1d1;
         margin: .25rem 0;
         padding: 0;
     }
@@ -44,6 +48,8 @@
     padding: .5rem 1rem;
     color: var(--main-text-color);
     transition: background-color .1s ease, color .1s ease;
+    text-align: end;
+    white-space: nowrap;
 }
 
 @include mq(large) {
