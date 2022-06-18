@@ -1,10 +1,15 @@
+.masonry {
+    margin: 0;
+}
+
 .masonry-item {
-    margin-left: 1rem;
     margin-bottom: 1rem;
     position: relative;
+    background-color: #d1d1d1;
 
-    @include mq(large) {
+    @include mq(750px) {
         cursor: zoom-in;
+        margin-left: 1rem;
     }
 
     &>img {

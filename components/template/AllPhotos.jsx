@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import { useMediaQuery } from 'react-responsive'
 import { DowloadLink } from '../atoms/Link'
 import Text from '../atoms/Text'
 import UserProfile from '../atoms/UserProfile'
 
 const AllPhotos = () => {
     const { push } = useRouter()
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width:1024px)' })
 
     const photos = [
         { id: 1, url: '/assets/img/agnieszka-kowalczyk.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
@@ -38,15 +40,19 @@ const AllPhotos = () => {
                         photos.map(img => (
                             <div key={img.id} className='masonry-item' onClick={() => push(`/photo/${img.id}`)}>
                                 <img src={img.url} alt="masonry" />
-                                <div className='overlay'>
-                                    <div className="overlay__actions">
-                                        <DowloadLink />
-                                    </div>
-                                    <div className='user'>
-                                        <UserProfile userPhoto={img.userPhoto} />
-                                        <Text text={img.userName} className="user-text" />
-                                    </div>
-                                </div>
+                                {
+                                    isDesktopOrLaptop && (
+                                        <div className='overlay'>
+                                            <div className="overlay__actions">
+                                                <DowloadLink />
+                                            </div>
+                                            <div className='user'>
+                                                <UserProfile userPhoto={img.userPhoto} />
+                                                <Text text={img.userName} className="user-text" />
+                                            </div>
+                                        </div>
+                                    )
+                                }
                             </div>
                         ))
                     }
