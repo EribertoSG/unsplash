@@ -44,7 +44,7 @@ const AllPhotos = () => {
                                     isDesktopOrLaptop && (
                                         <div className='overlay'>
                                             <div className="overlay__actions">
-                                                <DowloadLink />
+                                                <DowloadLink link={img.url} />
                                             </div>
                                             <div className='user'>
                                                 <UserProfile userPhoto={img.userPhoto} />
