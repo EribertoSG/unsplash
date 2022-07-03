@@ -5,7 +5,7 @@ const Heroimage = ({ src }) => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width:640px)' })
     return (
         <div className="hero-image">
-            <img src={src.urls.full} alt="agnieszka-kowalczyk" className="background-image" />
+            <img src={src.urls.full} alt="hero image" className="background-image" />
             <div className="hero-image__container">
                 <div className="hero-image__content">
                     <div className="hero-image__main-content">

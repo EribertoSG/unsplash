@@ -1,14 +1,20 @@
 import axios from 'axios'
+import Head from 'next/head'
 import DetailsPhoto from '../../components/Organisms/PhotoDetail'
 import Layout from '../../components/pages/Layout'
 
 export default function Photo({ photo }) {
     return (
-        <Layout>
-            {
-                <DetailsPhoto photo={photo} />
-            }
-        </Layout>
+        <>
+            <Head>
+                <title>{`HD photo of ${photo.user.username}`}</title>
+            </Head>
+            <Layout>
+                {
+                    <DetailsPhoto photo={photo} />
+                }
+            </Layout>
+        </>
     )
 }
 

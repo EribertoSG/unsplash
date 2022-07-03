@@ -1,4 +1,5 @@
 import axios from "axios"
+import Head from "next/head"
 import Heroimage from "../components/organisms/HeroImage"
 import Layout from "../components/pages/Layout"
 import AllPhotos from "../components/template/AllPhotos"
@@ -6,6 +7,10 @@ import AllPhotos from "../components/template/AllPhotos"
 export default function Home({ listPhotos, getARandomPhoto }) {
   return (
     <>
+    <img src="\assets\img\favicon\favicon-32x32.png" />
+      <Head>
+        <title>Beautiful free images and photos | unsplash</title>
+      </Head>
       <Heroimage src={getARandomPhoto} />
       <Layout>
         <AllPhotos photos={listPhotos} />
@@ -22,7 +27,7 @@ export const getServerSideProps = async (ctx) => {
   }
   const { data: listPhotos } = await axios.get('https://api.unsplash.com/photos/', headers)
   const { data: getARandomPhoto } = await axios.get('https://api.unsplash.com/photos/random', headers)
-  
+
   return {
     props: {
       listPhotos,
