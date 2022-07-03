@@ -1,7 +1,6 @@
 import { forwardRef } from "react"
 
-const Menu = forwardRef(({ className, download }, ref) => {
-
+const Menu = forwardRef(({ className, data }, ref) => {
     return (
         <div className={`menu ${className}`} ref={ref}>
             <div className="menu__container">
@@ -11,7 +10,7 @@ const Menu = forwardRef(({ className, download }, ref) => {
                 <hr />
                 <ul className="menu__list">
                     <li className="menu__item">
-                        <a href={download} download target="_blank" rel="noopener noreferrer">Original size</a>
+                        <a href={data.links.download + '&force=true'} download target="_blank" rel="noopener noreferrer">{`Original size (${data.width} x ${data.height})`}</a>
                     </li>
                 </ul>
             </div>

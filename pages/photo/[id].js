@@ -3,21 +3,10 @@ import DetailsPhoto from '../../components/Organisms/PhotoDetail'
 import Layout from '../../components/pages/Layout'
 
 export default function Photo({ photo }) {
-    console.log(photo)
-
     return (
         <Layout>
             {
-                <DetailsPhoto
-                    src={photo.urls.regular}
-                    userName={photo.user.username}
-                    userPhoto={photo.user.profile_image.medium}
-                    views={photo.views}
-                    downloads={photo.downloads}
-                    make={photo.exif.make}
-                    model={photo.exif.model}
-                    download={photo.links.download + '&force=true'}
-                />
+                <DetailsPhoto photo={photo} />
             }
         </Layout>
     )
