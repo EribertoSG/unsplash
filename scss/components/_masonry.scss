@@ -5,8 +5,8 @@
 .masonry-item {
     margin-bottom: 1rem;
     position: relative;
-    background-color: #d1d1d1;
-
+    background-color: #f5f4f4;
+    min-height: 400px;
     @include mq(750px) {
         cursor: zoom-in;
         margin-left: 1rem;

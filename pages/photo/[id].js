@@ -1,26 +1,41 @@
-import { useRouter } from 'next/router'
+import axios from 'axios'
 import DetailsPhoto from '../../components/Organisms/PhotoDetail'
 import Layout from '../../components/pages/Layout'
 
-export default function Photo() {
-    const { query } = useRouter()
+export default function Photo({ photo }) {
+    console.log(photo)
 
-    const photos = [
-        { id: 1, url: '/assets/img/agnieszka-kowalczyk.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
-        { id: 2, url: '/assets/img/ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
-        { id: 3, url: '/assets/img/elijah-m-henderson.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
-        { id: 4, url: '/assets/img/fabrizio-lunardi.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
-        { id: 5, url: '/assets/img/hamid-tajik.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' },
-        { id: 6, url: '/assets/img/marc-kleen.jpg', userName: "Eriberto Santos", userPhoto: '/assets/img/user/santos.png' }
-    ]
     return (
         <Layout>
             {
-                photos.filter(el => el.id == query.id)
-                    .map(photo => (
-                        <DetailsPhoto src={photo.url} userName={photo.userName} userPhoto={photo.userPhoto} key={photo.id} />
-                    ))
+                <DetailsPhoto
+                    src={photo.urls.regular}
+                    userName={photo.user.username}
+                    userPhoto={photo.user.profile_image.medium}
+                    views={photo.views}
+                    downloads={photo.downloads}
+                    make={photo.exif.make}
+                    model={photo.exif.model}
+                    download={img.links.download + '&force=true'}
+                />
             }
         </Layout>
     )
 }
+
+export const getServerSideProps = async (ctx) => {
+    const id = ctx.query.id
+    const headers = {
+        headers: {
+            Authorization: 'Client-ID I22cKyDJTTGNBp_cNmTJ-syXQtbP5OVIwLtVY2eg2to'
+        }
+    }
+    const response = await axios.get(`https://api.unsplash.com/photos/${id}`, headers)
+    const photo = response.data
+    return {
+        props: {
+            photo
+        }
+    }
+}
+
