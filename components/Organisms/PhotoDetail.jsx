@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ButtonIcon } from "../atoms/Button"
 import Text from "../atoms/Text"
 import UserProfile from "../atoms/UserProfile"
@@ -19,7 +20,7 @@ const PhotoDetail = ({ photo }) => {
                 <ButtonIcon data={photo} />
             </div>
             <div className="detail-body">
-                <CardImg src={photo.urls.regular} />
+                <CardImg src={photo.urls.regular} alt={photo.alt_description} width={photo.width} height={photo.height} />
             </div>
             <div className="detail-footer">
                 <div className="detail-1">
@@ -34,7 +35,7 @@ const PhotoDetail = ({ photo }) => {
                 </div>
                 <div className="detail-2">
                     <h3>Featured in</h3>
-                    <span><a href="/">Editorial</a></span>
+                    <span><Link href="/"><a>Editorial</a></Link></span>
                 </div>
                 <div className="detail-3">
                     <div className="detail-3__date">

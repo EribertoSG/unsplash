@@ -1,7 +1,8 @@
+import Image from 'next/image'
 const UserProfile = ({ userPhoto }) => {
     return (
         <div className="user-profile">
-            <img src={userPhoto} alt="user" className="photo-user" />
+            <Image src={userPhoto} alt='photo-user' className='photo-user' width={40} height={40} />
         </div>
     )
 }

@@ -1,3 +1,5 @@
 module.exports = {
-  TITLE: 'Beautiful Free Images & Pictures | Unsplash-API',
+  images: {
+    domains: ['images.unsplash.com']
+  }
 }
