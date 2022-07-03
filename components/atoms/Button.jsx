@@ -8,7 +8,7 @@ const Button = () => {
     )
 }
 
-const ButtonIcon = () => {
+const ButtonIcon = ({ download }) => {
 
     const menu = useRef()
 
@@ -17,14 +17,14 @@ const ButtonIcon = () => {
     }
     return (
         <div className="button-icon">
-            <a href="#" className="button-dowload" download target="_blank" rel="noopener noreferrer">
+            <a href={download} className="button-dowload" download target="_blank" rel="noopener noreferrer">
                 <span>Dowload</span>
             </a>
             <div className="button-options-container">
                 <button className="button-options" title="Options" onClick={openMenu}>
                     <svg className="arrow-down-icon" viewBox="0 0 32 32" version="1.1" aria-hidden="false"><path d="M9.9 11.5l6.1 6.1 6.1-6.1 1.9 1.9-8 8-8-8 1.9-1.9z"></path></svg>
                 </button>
-                <Menu className="menu-options" ref={menu} />
+                <Menu className="menu-options" ref={menu} download={download} />
             </div>
         </div>
     )

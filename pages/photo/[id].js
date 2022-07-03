@@ -16,7 +16,7 @@ export default function Photo({ photo }) {
                     downloads={photo.downloads}
                     make={photo.exif.make}
                     model={photo.exif.model}
-                    download={img.links.download + '&force=true'}
+                    download={photo.links.download + '&force=true'}
                 />
             }
         </Layout>

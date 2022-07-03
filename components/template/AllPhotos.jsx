@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useMediaQuery } from 'react-responsive'
-import { DowloadLink } from '../atoms/Link'
+import DownloadImage from '../atoms/DownloadImage'
 import Text from '../atoms/Text'
 import UserProfile from '../atoms/UserProfile'
 
@@ -26,7 +26,7 @@ const AllPhotos = ({ photos }) => {
                                     isDesktopOrLaptop && (
                                         <div className='overlay'>
                                             <div className="overlay__actions">
-                                                <DowloadLink link={img.links.download + '&force=true'} />
+                                                <DownloadImage link={img.links.download + '&force=true'} />
                                             </div>
                                             <div className='user'>
                                                 <UserProfile userPhoto={img.user.profile_image.medium} />
