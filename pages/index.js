@@ -7,7 +7,6 @@ import AllPhotos from "../components/template/AllPhotos"
 export default function Home({ listPhotos, getARandomPhoto }) {
   return (
     <>
-    <img src="\assets\img\favicon\favicon-32x32.png" />
       <Head>
         <title>Beautiful free images and photos | unsplash</title>
       </Head>
