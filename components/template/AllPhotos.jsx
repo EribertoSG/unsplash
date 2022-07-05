@@ -21,7 +21,7 @@ const AllPhotos = ({ photos }) => {
                     {
                         photos.map(img => (
                             <div key={img.id} className='masonry-item' onClick={() => push(`/photo/${img.id}`)}>
-                                <img src={img.urls.regular} alt="masonry" />
+                                <img src={img.urls.regular} alt={img.alt_description} />
                                 {
                                     isDesktopOrLaptop && (
                                         <div className='overlay'>

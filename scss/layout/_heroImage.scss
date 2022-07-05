@@ -3,6 +3,7 @@
     height: 350px;
     position: relative;
     margin-top: var(--header-height);
+    overflow: hidden;
 }
 
 .hero-image>img {
