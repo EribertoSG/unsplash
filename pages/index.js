@@ -1,6 +1,6 @@
 import axios from "axios"
 import Head from "next/head"
-import Heroimage from "../components/organisms/HeroImage"
+import Heroimage from "../components/Organisms/HeroImage"
 import Layout from "../components/pages/Layout"
 import AllPhotos from "../components/template/AllPhotos"
 
