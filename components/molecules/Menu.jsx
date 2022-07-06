@@ -10,7 +10,7 @@ const Menu = forwardRef(({ className, data }, ref) => {
                 <hr />
                 <ul className="menu__list">
                     <li className="menu__item">
-                        <a href={data.links.download + '&force=true'} download target="_blank" rel="noopener noreferrer">{`Original size (${data.width} x ${data.height})`}</a>
+                        <a href={data.links.download + '&force=true'} download="Download image" target="_blank" rel="noopener noreferrer">{`Original size (${data.width} x ${data.height})`}</a>
                     </li>
                 </ul>
             </div>
@@ -18,4 +18,5 @@ const Menu = forwardRef(({ className, data }, ref) => {
     )
 })
 
+Menu.displayName = 'dropdownmenu'
 export default Menu 
