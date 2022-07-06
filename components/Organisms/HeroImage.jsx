@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useMediaQuery } from 'react-responsive'
 import Inputsearch from "../molecules/InputSearch"
 
-const Heroimage = ({ src }) => {
+const HeroImage = ({ src }) => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width:640px)' })
     return (
         <div className="hero-image">
@@ -33,4 +33,4 @@ const Heroimage = ({ src }) => {
     )
 }
 
-export default Heroimage
+export default HeroImage
