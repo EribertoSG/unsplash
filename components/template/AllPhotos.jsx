@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useMediaQuery } from 'react-responsive'
@@ -22,7 +21,7 @@ const AllPhotos = ({ photos }) => {
                     {
                         photos.map(img => (
                             <div key={img.id} className='masonry-item' onClick={() => push(`/photo/${img.id}`)}>
-                                <Image src={img.urls.regular} alt={img.alt_description} layout="fill"  width={img.width} height={img.height}/>
+                                <img src={img.urls.regular} alt={img.alt_description} />
                                 {
                                     isDesktopOrLaptop && (
                                         <div className='overlay'>
