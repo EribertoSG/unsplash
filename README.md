@@ -4,5 +4,5 @@ This app has the following functionalities:
 1. Search images.
 2. Download images.
 
-# App link
+### App link
 https://apiunsplash.netlify.app/
