@@ -1,9 +1,7 @@
-import Image from 'next/image'
-
-const CardImg = ({ src, alt, width, height }) => {
+const CardImg = ({ src, alt}) => {
     return (
         <div className="card-img">
-            <Image src={src} alt={alt} width={width} height={height} />
+            <img src={src} alt={alt} />
         </div>
     )
 }

@@ -20,7 +20,7 @@ const PhotoDetail = ({ photo }) => {
                 <ButtonIcon data={photo} />
             </div>
             <div className="detail-body">
-                <CardImg src={photo.urls.regular} alt={photo.alt_description} width={photo.width} height={photo.height} />
+                <CardImg src={photo.urls.regular} alt={photo.alt_description} />
             </div>
             <div className="detail-footer">
                 <div className="detail-1">
