@@ -20,9 +20,9 @@ const Navigation = () => {
                     </div>
                 </div>
                 <div className="header__second-item">
-                    <Link href="https://unsplash.com">
+                    <Link href="https://www.facebook.com/eriberto.santos.129142">
                         <a className='link__icon' target={'_blank'}>
-                            Go to unsplash
+                            Know me
                         </a>
                     </Link>
                 </div>
